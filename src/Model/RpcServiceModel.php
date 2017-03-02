@@ -146,7 +146,7 @@ class RpcServiceModel
             $namespaceSep = preg_quote('\\');
             $pattern = sprintf(
                 '#%s%sV%s#',
-                $this->module,
+                preg_quote($this->module),
                 $namespaceSep,
                 $version
             );
